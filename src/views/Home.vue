@@ -224,7 +224,7 @@ export default {
     },
     greet: function (event) {
       var CLIENT_ID = '04215351afb246e0aba60199b1c46747'
-      var REDIRECT_URI = 'https://mollykannn.github.io/spotify-web-widget/vue'
+      var REDIRECT_URI = 'https://mollykannn.github.io/spotify-web-widget/#/vertify'
       function getLoginURL (scopes) {
         return (
           'https://accounts.spotify.com/authorize?client_id=' +

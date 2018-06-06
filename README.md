@@ -2,8 +2,8 @@
 
 Get the Spotify Web Widget.
 
-[https://mollykannn.github.io/Spotify-web-widget](https://mollykannn.github.io/Spotify-web-widget)
-![Screenshot](https://mollykannn.github.io/Spotify-web-widget/screenshot.png)
+[https://mollykannn.github.io/spotify-web-widget](https://mollykannn.github.io/spotify-web-widget)
+![Screenshot](https://mollykannn.github.io/spotify-web-widget/screenshot.png)
 
 
 ## 安裝 (Install)
