@@ -222,7 +222,7 @@ export default {
         this.isHeight = true
       }
     },
-    greet: function (event) {
+    greet: function () {
       var CLIENT_ID = '04215351afb246e0aba60199b1c46747'
       var REDIRECT_URI = 'https://mollykannn.github.io/spotify-web-widget/#/vertify'
       function getLoginURL (scopes) {
@@ -280,7 +280,7 @@ export default {
         'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=750, height=730, top=0, left=0'
       )
     },
-    searchbutton: function (event) {
+    searchbutton: function () {
       if (this.searchCriteria.length > 0) {
         this.listType = 'search'
         this.albumTitle = 'Album'
