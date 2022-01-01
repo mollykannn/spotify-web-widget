@@ -11,11 +11,18 @@
     "vue"
   ],
   "vetur.validation.template": false,
-  "files.trimTrailingWhitespace": true, // 啟用後，將在保存文件時刪除行尾的空格。
+  "files.trimTrailingWhitespace": true,
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
 }
