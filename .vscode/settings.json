@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "vue"
+  ],
+  "vetur.validation.template": false,
+  "files.trimTrailingWhitespace": true, // 啟用後，將在保存文件時刪除行尾的空格。
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

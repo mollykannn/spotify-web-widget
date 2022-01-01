@@ -3,7 +3,7 @@
 Get the Spotify Web Widget.
 
 [https://mollykannn.github.io/spotify-web-widget](https://mollykannn.github.io/spotify-web-widget)
-![Screenshot](https://mollykannn.github.io/spotify-web-widget/screenshot.png)
+![Screenshot](https://mollykannn.github.io/spotify-web-widget/img/screenshot.png)
 
 
 ## 安裝 (Install)
@@ -23,3 +23,5 @@ yarn run build
 ```shell
 yarn run serve
 ```
+
+Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
