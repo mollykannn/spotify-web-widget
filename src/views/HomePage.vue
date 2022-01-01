@@ -20,13 +20,12 @@ export default {
 function LoginSetting(router) {
   const Login = () => {
     let CLIENT_ID = '04215351afb246e0aba60199b1c46747'
-    let REDIRECT_URI = 'http://localhost:3000/spotify-web-widget/#/vertify'
-    let url = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(
-      REDIRECT_URI
-    )}&scope=user-library-read&response_type=token`
+    let REDIRECT_URI = 'https://mollykannn.github.io/spotify-web-widget/#/vertify'
+    let url = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=user-library-read&response_type=token`
     window.addEventListener(
       'message',
       function (event) {
+        console.log(event)
         let hash = JSON.parse(event.data)
         if (hash.type !== 'access_token') {
           return
@@ -36,6 +35,7 @@ function LoginSetting(router) {
       },
       false
     )
+    console.log(url)
     window.open(url, 'Spotify', 'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=750, height=730, top=0, left=0')
   }
   return { Login }
