@@ -62,7 +62,10 @@ hr {
   max-width: 1170px;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media #{$Extra-large} {
     max-width: 980px;
   }
@@ -81,6 +84,7 @@ hr {
   padding: 1.5em;
   display: flex;
   flex-wrap: wrap;
+  background-color: #ffffff;
 }
 
 .title-column {
