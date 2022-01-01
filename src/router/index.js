@@ -17,6 +17,14 @@ const Router = createRouter({
     name: "details",
     component: () => import('@/views/WidgetDetails.vue'),
     beforeEnter: (to, from, next) => sessionStorage.getItem('access_token') ? next() : next('/')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
+  },
+  {
+    path: '/access_token:pathMatch(.*)*',
+    redirect: '/vertify'
   }]
 })
 
