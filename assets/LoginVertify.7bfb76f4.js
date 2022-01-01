@@ -1,0 +1,1 @@
+var e={};window.location.hash.replace(/^#\/?/,"").split("&").forEach(function(s){var n=s.indexOf("=");n!==-1&&(e[s.substring(0,n)]=decodeURIComponent(s.substring(n+1)))});e.access_token&&(window.opener.postMessage(JSON.stringify({type:"access_token",access_token:e.access_token,expires_in:e.expires_in||0}),"*"),window.close());const o={};export{o as default};
