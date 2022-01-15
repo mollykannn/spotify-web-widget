@@ -1,12 +1,18 @@
 <script>
+import { useStore } from '@/store/store'
 export default {
   props: {
     datas: Object,
-    EditSpotifyID: Function,
     Paglication: Function
   },
-  setup(props) {
-    return props
+  setup() {
+    const store = useStore()
+    const updateSpotifyID = (uri) => {
+      store.updateSpotifyID(uri)
+    }
+    return {
+      updateSpotifyID
+    }
   }
 }
 </script>
@@ -32,7 +38,7 @@ export default {
         >
       </div>
     </div>
-    <div v-for="data in datas.items" :key="data.value" class="album" v-on:click.prevent="EditSpotifyID(data.uri)">
+    <div v-for="data in datas.items" :key="data.value" class="album" v-on:click.prevent="updateSpotifyID(data.uri)">
       <div class="album-image">
         <img :src="data.images[0].url" />
       </div>

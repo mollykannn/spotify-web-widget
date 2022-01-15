@@ -1,5 +1,5 @@
 {
-  "name": "spotify-web-widget-3",
+  "name": "spotify-web-widget",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -13,19 +13,19 @@
   },
   "devDependencies": {
     "@amatlash/vite-plugin-stylelint": "^1.2.0",
-    "@vitejs/plugin-vue": "^2.0.0",
+    "@vitejs/plugin-vue": "^2.0.1",
     "eslint": "^8.6.0",
-    "eslint-plugin-vue": "^8.2.0",
+    "eslint-plugin-vue": "^8.3.0",
     "postcss-html": "^1.3.0",
-    "postcss-scss": "^4.0.2",
+    "postcss-scss": "^4.0.3",
     "prettier": "^2.5.1",
-    "sass": "^1.47.0",
+    "sass": "^1.48.0",
     "stylelint": "^14.2.0",
     "stylelint-config-property-sort-order-smacss": "^8.0.0",
     "stylelint-config-recommended-vue": "^1.1.0",
     "stylelint-order": "^5.0.0",
-    "vite": "^2.7.2",
+    "vite": "^2.7.12",
     "vite-plugin-eslint": "^1.3.0",
-    "vite-plugin-pwa": "^0.11.12"
+    "vite-plugin-pwa": "^0.11.13"
   }
 }

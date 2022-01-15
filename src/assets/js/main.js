@@ -2,14 +2,10 @@ import SpotifyWebApi from 'spotify-web-api-js'
 let spotifyApi = new SpotifyWebApi()
 
 function setData(listType, data) {
-  data = listType.indexOf('search') >= 0 ? data[listType.replace('search','').toLowerCase()] : data
+  data = listType.indexOf('search') >= 0 ? data[listType.replace('search', '').toLowerCase()] : data
   return {
     title: `${listType.indexOf('get') >= 0 ? 'Saved ' : ''}${
-      listType.indexOf('Album') >= 0
-        ? 'Album'
-        : listType.indexOf('Playlist') >= 0
-        ? 'Playlist'
-        : 'Track'
+      listType.indexOf('Album') >= 0 ? 'Album' : listType.indexOf('Playlist') >= 0 ? 'Playlist' : 'Track'
     }`,
     listType: listType,
     previous: data.previous,
@@ -33,15 +29,13 @@ function setData(listType, data) {
   }
 }
 
-export function previousNextAlbum(listType, limitNumber, offsetNumber, searchCriteria = '') {
-  return new Promise((resolve) => {
-    let data = listType.indexOf('get') >= 0
-      ? [{ limit: limitNumber, offset: offsetNumber }]
-      : [searchCriteria, { limit: limitNumber, offset: offsetNumber }]
-    spotifyApi[listType](...data).then((res) => {
-        resolve(setData(listType, res))
-    }).catch(() => {
-      window.location.href = '/'
-    })
-  })
+export async function getSpotifyAPI(listType, limitNumber, offsetNumber, searchCriteria = '') {
+  try {
+    let data = [{ limit: limitNumber, offset: offsetNumber }];
+    listType.indexOf('search') >= 0 && data.unshift(searchCriteria);
+    let res = await spotifyApi[listType](...data)
+    return setData(listType, res)
+  } catch (e) {
+    window.location.href = '/'
+  }
 }

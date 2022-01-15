@@ -1,11 +1,13 @@
 <script>
-import { computed, reactive, inject, watch } from 'vue'
+import { computed, reactive, watch } from 'vue'
+import { useStore } from "@/store/store";
 
 export default {
   props: {
     page: String
   },
   setup(props) {
+    const store = useStore()
     let setting = reactive({
       size: 'large',
       responsive: false,
@@ -38,7 +40,7 @@ export default {
       iframeWidth: computed(() => setting.width == 0 ? '100%' : setting.width),
       iframeStyle: computed(() => setting.maxWidth == 0 ? {} : { 'max-width': `${setting.maxWidth}px` }),
     })
-    watch(inject('spotifyID'), (id) => {
+    watch(store.getSpotifyID, (id) => {
       setting.url = id
     })
 

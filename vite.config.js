@@ -7,7 +7,7 @@ import path from 'path'
 
 export default defineConfig({
   base: '/spotify-web-widget',
-  plugins: [vue(), viteStylelint(), eslintPlugin(), VitePWA({
+  plugins: [vue(), viteStylelint(), VitePWA({
     mode: 'development',
     srcDir: 'src',
     filename: 'sw.js',
