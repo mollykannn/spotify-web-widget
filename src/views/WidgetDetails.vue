@@ -28,9 +28,9 @@ export default {
       },
     })
     let data = reactive({
-      album: '',
-      playlist: '',
-      saveTracks: '',
+      album: {},
+      playlist: {},
+      saveTracks: {},
       GetData: async (...arg) => {
         let promiseSpotifyAPI = arg.map((element) => getSpotifyAPI(...element, search.data))
         let results = await Promise.all(promiseSpotifyAPI)
@@ -64,10 +64,10 @@ export default {
       <h2 class="title-description" id="title-description">Get the Spotify Web Widget.</h2>
     </div>
     <div id="search-tool">
-      <input type="text" class="input-search" v-model="search.data" v-on:keyup.enter="search.Submit()" placeholder="Search Music" />
-      <ListColumn :datas="data.album" :Paglication="data.getData"></ListColumn>
-      <ListColumn :datas="data.playlist" :Paglication="data.getData"></ListColumn>
-      <ListColumn :datas="data.saveTracks" :Paglication="data.getData"></ListColumn>
+      <input type="text" class="input-search" v-model="search.data" @keyup.enter="search.Submit()" placeholder="Search Music" />
+      <ListColumn :datas="data.album" @Paglication="data.GetData"></ListColumn>
+      <ListColumn :datas="data.playlist" @Paglication="data.GetData"></ListColumn>
+      <ListColumn :datas="data.saveTracks" @Paglication="data.GetData"></ListColumn>
     </div>
   </div>
   <SpotifyWidget page="details-page"></SpotifyWidget>

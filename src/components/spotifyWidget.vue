@@ -6,7 +6,7 @@ export default {
   props: {
     page: String
   },
-  setup(props) {
+  setup() {
     const store = useStore()
     let setting = reactive({
       size: 'large',
@@ -45,15 +45,14 @@ export default {
     })
 
     return {
-      setting,
-      props
+      setting
     }
   }
 }
 </script>
 
 <template>
-  <div :class="['column-widget', props.page]">
+  <div :class="['column-widget', page]">
     <div class="widget">
       <iframe
         :src="`https://open.spotify.com/embed?uri=${setting.url}`"

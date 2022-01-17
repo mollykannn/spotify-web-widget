@@ -3,17 +3,18 @@ import { useStore } from '@/store/store'
 export default {
   props: {
     datas: Object,
-    Paglication: Function
+    // Paglication: Function
   },
+  emit: ['Paglication'],
   setup() {
     const store = useStore()
     const updateSpotifyID = (uri) => {
       store.updateSpotifyID(uri)
     }
     return {
-      updateSpotifyID
+      updateSpotifyID,
     }
-  }
+  },
 }
 </script>
 
@@ -25,20 +26,17 @@ export default {
       </h3>
       <div class="previous-next-column">
         <span
-          v-on:click.prevent="Paglication([datas.listType, datas.limit, datas.offset - datas.limit])"
+          @click.prevent="$emit('Paglication', [datas.listType, datas.limit, datas.offset - datas.limit])"
           v-show="datas.previous"
           class="previous"
           >&laquo; Previous</span
         >
-        <span
-          v-on:click.prevent="Paglication([datas.listType, datas.limit, datas.offset + datas.limit])"
-          v-show="datas.next"
-          class="next"
+        <span @click.prevent="$emit('Paglication', [datas.listType, datas.limit, datas.offset + datas.limit])" v-show="datas.next" class="next"
           >Next &raquo;</span
         >
       </div>
     </div>
-    <div v-for="data in datas.items" :key="data.value" class="album" v-on:click.prevent="updateSpotifyID(data.uri)">
+    <div v-for="data in datas.items" :key="data.value" class="album" @click.prevent="updateSpotifyID(data.uri)">
       <div class="album-image">
         <img :src="data.images[0].url" />
       </div>

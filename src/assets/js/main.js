@@ -36,6 +36,6 @@ export async function getSpotifyAPI(listType, limitNumber, offsetNumber, searchC
     let res = await spotifyApi[listType](...data)
     return setData(listType, res)
   } catch (e) {
-    window.location.href = '/'
+    // window.location.href = '/'
   }
 }
