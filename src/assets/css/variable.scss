@@ -1,0 +1,64 @@
+$Extra-large: "only screen and (max-width : 1200px)";
+$Large: "only screen and (max-width : 992px)";
+$Medium: "only screen and (max-width : 768px)";
+$Small: "only screen and (max-width : 650px)";
+
+* {
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --brand-hue: 30;
+  --brand-saturation: 50%;
+  --brand-lightness: 97%;
+  --light-basic: hsl(var(--brand-hue) 0% 100%);
+  --light-reverse: hsl(var(--brand-hue) 0% 0%);
+  --light-background:
+    hsl(
+      var(--brand-hue) var(--brand-saturation) var(--brand-lightness)
+    );
+  --light-text: hsl(var(--brand-hue) 0% 30%);
+  --light-text-small: hsl(var(--brand-hue) 0% 50%);
+
+  --dark-basic: hsl(var(--brand-hue) 0% 0%);
+  --dark-reverse: hsl(var(--brand-hue) 100% 100%);
+  --dark-background:
+    hsl(
+      var(--brand-hue) calc(var(--brand-saturation) / 50)
+      calc(var(--brand-lightness) / 10)
+    );
+  --dark-text: hsl(var(--brand-hue) 0% 70%);
+  --dark-text-small: hsl(var(--brand-hue) 0% 40%);
+
+}
+
+:root {
+  --background: var(--light-background);
+  --basic: var(--light-basic);
+  --reverse:var(--light-reverse);
+  --text: var(--light-text);
+  --text-small: var(--light-text-small);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-background);
+    --basic: var(--dark-basic);
+    --reverse:var(--dark-reverse);
+    --text: var(--dark-text);
+    --text-small: var(--dark-text-small);
+  }
+}
+
+[data-theme="light"] {
+  --background: var(--light-background);
+  --basic: var(--light-basic);
+  --reverse:var(--light-reverse);
+  --text: var(--light-text);
+  --text-small: var(--light-text-small);
+}
+
+[data-theme="dark"] {
+  --background: var(--dark-background);
+  --basic: var(--dark-basic);
+  --reverse:var(--dark-reverse);
+  --text: var(--dark-text);
+  --text-small: var(--dark-text-small);
+}

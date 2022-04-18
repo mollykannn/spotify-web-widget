@@ -58,24 +58,19 @@ export default {
 }
 </script>
 <template>
-  <div class="column-search">
-    <div class="title-column">
-      <h1 class="title">Spotify Web Widget</h1>
-      <h2 class="title-description" id="title-description">Get the Spotify Web Widget.</h2>
+  <div class="d-flex mb-6">
+    <div class="column-search">
+      <div class="title-column">
+        <h1 class="title mb-2">Spotify Web Widget</h1>
+        <h2 class="title-description mb-6" id="title-description">Get the Spotify Web Widget.</h2>
+      </div>
+      <div id="search-tool">
+        <input type="text" class="input-search mb-6" v-model="search.data" @keyup.enter="search.Submit()" placeholder="Search Music" />
+        <ListColumn :datas="data.album" @Paglication="data.GetData"></ListColumn>
+        <ListColumn :datas="data.playlist" @Paglication="data.GetData"></ListColumn>
+        <ListColumn :datas="data.saveTracks" @Paglication="data.GetData"></ListColumn>
+      </div>
     </div>
-    <div id="search-tool">
-      <input type="text" class="input-search" v-model="search.data" @keyup.enter="search.Submit()" placeholder="Search Music" />
-      <ListColumn :datas="data.album" @Paglication="data.GetData"></ListColumn>
-      <ListColumn :datas="data.playlist" @Paglication="data.GetData"></ListColumn>
-      <ListColumn :datas="data.saveTracks" @Paglication="data.GetData"></ListColumn>
-    </div>
+    <SpotifyWidget page="details-page"></SpotifyWidget>
   </div>
-  <SpotifyWidget page="details-page"></SpotifyWidget>
-  <footer class="footer">
-    Created by
-    <a href="https://github.com/mollykannn">Molly Kan</a>
-    <br />
-    Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
-    <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-  </footer>
 </template>

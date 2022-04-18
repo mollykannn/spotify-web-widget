@@ -37,18 +37,11 @@ export default {
 
 <template>
   <div class="title-column">
-    <h1 class="title">Spotify Web Widget</h1>
-    <h2 class="title-description" id="title-description">
+    <h1 class="title mb-2">Spotify Web Widget</h1>
+    <h2 class="title-description mb-6" id="title-description">
       To use search tools, Please
-      <button class="login-button" @click="Login">Login</button> first.
+      <button class="primary" @click="Login">Login</button> first.
     </h2>
   </div>
-  <SpotifyWidget></SpotifyWidget>
-  <footer class="footer">
-    Created by
-    <a href="https://github.com/mollykannn">Molly Kan</a>
-    <br />
-    Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
-    <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-  </footer>
+  <SpotifyWidget class="mb-6"></SpotifyWidget>
 </template>

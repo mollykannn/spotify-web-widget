@@ -1,143 +1,32 @@
-$Extra-large: "only screen and (max-width : 1200px)";
-$Large: "only screen and (max-width : 992px)";
-$Medium: "only screen and (max-width : 768px)";
-$Small: "only screen and (max-width : 650px)";
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  box-sizing: border-box;
-  height: 100%;
-  font-size: 62.5%;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  background-color: #fbf8f5;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-button {
-  padding: 0;
-  border: none;
-  outline: none;
-  background: none;
-  color: inherit;
-  font: inherit;
-}
-
-input[type="number"],
-input[type="text"] {
-  padding: 4px 5px;
-  font-size: 90%;
-}
-
-input[type="radio"] {
-  margin-right: 7px;
-}
-
-label {
-  display: inline-block;
-  width: 90px;
-}
-
-hr {
-  flex: 0 100%;
-  height: 1px;
-  border: 0;
-  background-color: #d4d4d4;
-}
-
-#app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1170px;
-  min-height: 100vh;
-  margin: 0 auto;
-
-  @media #{$Extra-large} {
-    max-width: 980px;
-  }
-
-  @media #{$Large} {
-    max-width: 730px;
-  }
-
-  @media #{$Medium} {
-    max-width: 650px;
-  }
-
-  @media #{$Small} {
-    flex: 1;
-  }
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.5em;
-  background-color: #fff;
-}
+@import 'basic.scss';
 
 .title-column {
   flex: 0 0 100%;
   text-align: center;
 
-  & .title {
-    margin-bottom: 15px;
-  }
-
   & .title-description {
-    margin-bottom: 25px;
-    color: #6b6b6b;
-    font-size: 1.2em;
-  }
-
-  & .login-button {
-    display: inline-block;
-    padding: 0.2em 1em;
-    transition: 0.3s;
-    background-color: #00c141;
-    color: #fff;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #008f30;
-    }
+    color: var(--text-small);
+    font-size: 2rem;
   }
 }
 
 .column-search {
   flex: 1;
-  margin-right: 25px;
+  margin-right: 2.5rem;
 
   @media #{$Large} {
-    flex: 0 0 100%;
+    margin-right: 0;
   }
 
   & .input-search {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   & .album-title {
     flex: 1;
-    margin: 10px 0;
 
     & .count {
-      margin-left: 5px;
-      color: #6b6b6b;
+      color: var(--text-small);
       font-size: 75%;
     }
   }
@@ -149,11 +38,11 @@ hr {
 
     & .previous-next-column {
       display: flex;
-      color: #6b6b6b;
+      color: var(--text-small);
       cursor: pointer;
 
-      & .next {
-        margin-left: 10px;
+      & .previous {
+        margin-right: 1rem;
       }
     }
   }
@@ -161,40 +50,26 @@ hr {
   .container-album {
     display: flex;
     flex-wrap: wrap;
-    margin-right: 10px;
-    text-align: left;
 
     & .album {
       flex: 0 25%;
-      margin: 10px 0;
-      padding: 0 15px;
+      margin-bottom: 2rem;
+      padding-right: 1.5rem;
       cursor: pointer;
+
+      &:nth-child(4n+1) {
+        padding-right: 0;
+      }
 
       @media #{$Small} {
         flex: 0 50%;
+        &:nth-child(2n+1) {
+          padding-right: 0;
+        }
       }
 
-      & .album-image {
-        display: flex;
-        align-items: center;
-        height: 141.75px;
-        overflow: hidden;
-
-        @media #{$Large} {
-          height: 138px;
-        }
-
-        @media #{$Medium} {
-          height: 118px;
-        }
-
-        @media #{$Medium} {
-          height: inherit;
-        }
-
-        & img {
-          max-width: 100%;
-        }
+      & img {
+        max-width: 100%;
       }
 
       & .album-text {
@@ -205,7 +80,7 @@ hr {
         }
 
         & .description {
-          color: #6b6b6b;
+          color: var(--text-small);
           font-size: 80%;
         }
       }
@@ -215,28 +90,25 @@ hr {
 
 .column-widget {
   display: flex;
-  flex: 0 0 100%;
   flex-wrap: wrap;
   align-items: center;
-
-  &.details-page {
-    display: block;
-    flex: 0 0 400px;
-
-    @media #{$Large} {
-      flex: 0 0 100%;
-      margin-top: 50px;
-    }
-  }
+  justify-content: center;
 
   & .widget {
-    flex: 0 0 450px;
-    margin-right: 25px;
+    flex: 0 0 40%;
     text-align: center;
+  }
 
+  &.details-page {
+    flex: 0 0 40%;
     @media #{$Large} {
       flex: 0 0 100%;
     }
+
+    & .widget {
+      flex: 0 0 100%;
+    }
+
   }
 
   & .setting-code-column {
@@ -244,16 +116,16 @@ hr {
 
     .column {
       position: relative;
-      margin-top: 15px;
-      padding: 15px;
-      border: 1px solid #000;
+      margin-top: 3rem;
+      padding: 2rem 1.5rem;
+      border: 1px solid var(--reverse);
 
       &::before {
         position: absolute;
-        top: -16px;
-        left: 15px;
-        padding: 0 15px;
-        background-color: #fff;
+        top: -1.6rem;
+        left: 1.5rem;
+        padding: 0 1.5rem;
+        background-color: var(--basic);
         font-size: 2rem;
       }
     }
@@ -264,27 +136,38 @@ hr {
       }
 
       & .setting-column {
-        margin: 3px 0;
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+        & label {
+          display: inline-block;
+          width: 9rem;
+        }
 
         & input[type="number"],
         & input[type="text"] {
-          width: calc(100% - 90px);
+          width: calc(100% - 9rem);
         }
       }
     }
 
     .code {
-      margin-top: 30px;
-
       &::before {
         content: "Embed Code";
       }
 
       & .code-column {
         display: block;
-        margin-top: 5px;
-        padding: 15px;
-        background-color: #f6f8fa;
+        position: relative;
+        padding: 2.5rem 2rem;
+        background-color: hsl(210, 29%, 97%);
+        color: var(--text-small);
+
+        & .copy {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
         font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
         font-size: 85%;
         word-break: break-word;
@@ -294,15 +177,10 @@ hr {
 }
 
 footer {
-  a {
-    color: #4d4d4d;
-  }
-
-  display: block;
-  flex: 0 0 100%;
-  margin-top: 3rem;
-  color: hsl(0deg 0% 50%);
+  color: var(--text-small);
   font-size: 85%;
-  line-height: 1.5;
   text-align: center;
+  a {
+    color: var(--text);
+  }
 }

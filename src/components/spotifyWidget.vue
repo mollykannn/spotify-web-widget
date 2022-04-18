@@ -44,7 +44,26 @@ export default {
       setting.url = id
     })
 
+    let copy = reactive({
+      code: computed(() => `<iframe src="https://open.spotify.com/embed?uri=${setting.url}" width="${setting.iframeWidth}" height="${setting.height}" frameborder="0" allowtransparency="true" allow="encrypted-media" ${setting.maxWidth == 0 ? '' : `style="max-width: ${setting.maxWidth}px"` }/></iframe>`),
+      CopyText: () => {
+          if (/iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+            let textarea = document.createElement('textarea');
+            textarea.style.position = 'fixed';
+            textarea.value = copy.code;
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+          } else {
+            navigator.clipboard.writeText(copy.code)
+          }
+      }
+    })
+
     return {
+      copy,
       setting
     }
   }
@@ -96,7 +115,8 @@ export default {
       </div>
       <div class="column code">
         <code class="code-column">
-          {{ `<iframe src="https://open.spotify.com/embed?uri=${setting.url}" width="${setting.iframeWidth}" height="${setting.height}" frameborder="0" allowtransparency="true" allow="encrypted-media" ${setting.maxWidth == 0 ? '' : `style="max-width: ${setting.maxWidth}px"` }/></iframe>` }}
+          {{ copy.code }}
+          <button class="small primary copy tip" data-label="Success" @click="copy.CopyText()">Copy</button>
         </code>
       </div>
     </div>
