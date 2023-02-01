@@ -23,7 +23,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-property-sort-order-smacss": "^9.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-order": "^5.0.0",
+    "stylelint-order": "^6.0.1",
     "vite": "^2.9.13",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-pwa": "^0.12.4"
