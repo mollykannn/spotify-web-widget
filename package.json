@@ -19,7 +19,7 @@
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.7",
     "prettier": "^3.0.0",
-    "sass": "^1.64.2",
+    "sass": "^1.68.0",
     "stylelint": "^15.10.3",
     "stylelint-config-property-sort-order-smacss": "^9.1.0",
     "stylelint-config-recommended-vue": "^1.5.0",
