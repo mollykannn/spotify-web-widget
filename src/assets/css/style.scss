@@ -1,5 +1,3 @@
-@import 'basic.scss';
-
 .title-column {
   flex: 0 0 100%;
   text-align: center;
@@ -14,7 +12,7 @@
   flex: 1;
   margin-right: 2.5rem;
 
-  @media #{$Large} {
+  @media screen and (max-width : 992px) {
     margin-right: 0;
   }
 
@@ -61,7 +59,7 @@
         padding-right: 0;
       }
 
-      @media #{$Small} {
+      @media screen and (max-width : 650px) {
         flex: 0 50%;
         &:nth-child(2n+1) {
           padding-right: 0;
@@ -101,7 +99,7 @@
 
   &.details-page {
     flex: 0 0 40%;
-    @media #{$Large} {
+    @media screen and (max-width : 992px) {
       flex: 0 0 100%;
     }
 
