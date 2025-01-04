@@ -42,15 +42,9 @@ importers:
       stylelint:
         specifier: ^16.12.0
         version: 16.12.0
-      stylelint-config-property-sort-order-smacss:
-        specifier: ^10.0.0
-        version: 10.0.0(stylelint@16.12.0)
       stylelint-config-recommended-vue:
         specifier: ^1.5.0
         version: 1.5.0(postcss-html@1.7.0)(stylelint@16.12.0)
-      stylelint-order:
-        specifier: ^6.0.4
-        version: 6.0.4(stylelint@16.12.0)
       vite:
         specifier: ^6.0.7
         version: 6.0.7(sass@1.83.1)(terser@5.37.0)
@@ -60,6 +54,12 @@ importers:
       vite-plugin-pwa:
         specifier: ^0.21.1
         version: 0.21.1(vite@6.0.7(sass@1.83.1)(terser@5.37.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+      workbox-precaching:
+        specifier: ^7.3.0
+        version: 7.3.0
+      workbox-window:
+        specifier: ^7.3.0
+        version: 7.3.0
 
 packages:
 
@@ -1318,9 +1318,6 @@ packages:
     resolution: {integrity: sha512-IQOkD3hbR5KrN93MtcYuad6YPuTSUhntLHDuLEbFWE+ff2/XSZNdZG+LcbbIW5AXKg/WFIfYItIzVoHngHXZzA==}
     engines: {node: '>=12 || >=16'}
 
-  css-property-sort-order-smacss@2.2.0:
-    resolution: {integrity: sha512-nXutswsivIEBOrPo/OZw2KQjFPLvtg68aovJf6Kqrm3L6FmTvvFPaeDrk83hh0+pRJGuP3PeKJwMS0E6DFipdQ==}
-
   css-tree@3.1.0:
     resolution: {integrity: sha512-0eW44TGN5SQXU1mWSkKwFstI/22X2bG1nYzZTYMAWjylYURhse752YgbE4Cx46AC+bAvI+/dYTPRk1LqSUnu6w==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
@@ -2228,11 +2225,6 @@ packages:
     resolution: {integrity: sha512-9RbEr1Y7FFfptd/1eEdntyjMwLeghW1bHX9GWjXo19vx4ytPQhANltvVxDggzJl7mnWM+dX28kb6cyS/4iQjlQ==}
     engines: {node: '>=4'}
 
-  postcss-sorting@8.0.2:
-    resolution: {integrity: sha512-M9dkSrmU00t/jK7rF6BZSZauA5MAaBW4i5EnJXspMwt4iqTh/L9j6fgMnbElEOfyRyfLfVbIHj/R52zHzAPe1Q==}
-    peerDependencies:
-      postcss: ^8.4.20
-
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
@@ -2532,12 +2524,6 @@ packages:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
 
-  stylelint-config-property-sort-order-smacss@10.0.0:
-    resolution: {integrity: sha512-NuiTgyqD8UdYY1IpTBIodBbrWKwaib5r8sq5kGHQ52UrmT8O7Fa8ZWYGipSZw6k9tGoljl9Hng2jtH+wBTMa1Q==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^14.0.0 || ^15.0.0 || ^16.0.0
-
   stylelint-config-recommended-vue@1.5.0:
     resolution: {integrity: sha512-65TAK/clUqkNtkZLcuytoxU0URQYlml+30Nhop7sRkCZ/mtWdXt7T+spPSB3KMKlb+82aEVJ4OrcstyDBdbosg==}
     engines: {node: ^12 || >=14}
@@ -2550,11 +2536,6 @@ packages:
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.1.0
-
-  stylelint-order@6.0.4:
-    resolution: {integrity: sha512-0UuKo4+s1hgQ/uAxlYU4h0o0HS4NiQDud0NAUNI0aa8FJdmYHA5ZZTFHiV5FpmE3071e9pZx5j0QpVJW5zOCUA==}
-    peerDependencies:
-      stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
 
   stylelint@14.16.1:
     resolution: {integrity: sha512-ErlzR/T3hhbV+a925/gbfc3f3Fep9/bnspMiJPorfGEmcBbXdS+oo6LrVtoUZ/w9fqD6o6k7PtUlCOsCRdjX/A==}
@@ -4200,8 +4181,6 @@ snapshots:
 
   css-functions-list@3.2.3: {}
 
-  css-property-sort-order-smacss@2.2.0: {}
-
   css-tree@3.1.0:
     dependencies:
       mdn-data: 2.12.2
@@ -5176,10 +5155,6 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@8.0.2(postcss@8.4.49):
-    dependencies:
-      postcss: 8.4.49
-
   postcss-value-parser@4.2.0: {}
 
   postcss@8.4.49:
@@ -5536,12 +5511,6 @@ snapshots:
       postcss-html: 1.7.0
       stylelint: 16.12.0
 
-  stylelint-config-property-sort-order-smacss@10.0.0(stylelint@16.12.0):
-    dependencies:
-      css-property-sort-order-smacss: 2.2.0
-      stylelint: 16.12.0
-      stylelint-order: 6.0.4(stylelint@16.12.0)
-
   stylelint-config-recommended-vue@1.5.0(postcss-html@1.7.0)(stylelint@16.12.0):
     dependencies:
       postcss-html: 1.7.0
@@ -5552,12 +5521,6 @@ snapshots:
 
   stylelint-config-recommended@14.0.1(stylelint@16.12.0):
     dependencies:
-      stylelint: 16.12.0
-
-  stylelint-order@6.0.4(stylelint@16.12.0):
-    dependencies:
-      postcss: 8.4.49
-      postcss-sorting: 8.0.2(postcss@8.4.49)
       stylelint: 16.12.0
 
   stylelint@14.16.1:
