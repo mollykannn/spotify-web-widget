@@ -2,12 +2,11 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 import eslintPlugin from 'vite-plugin-eslint'
-import viteStylelint from '@amatlash/vite-plugin-stylelint'
 import path from 'path'
 
 export default defineConfig({
   base: '/spotify-web-widget',
-  plugins: [vue(), viteStylelint(), VitePWA({
+  plugins: [vue(), VitePWA({
     mode: 'development',
     srcDir: 'src',
     filename: 'sw.js',
