@@ -20,10 +20,10 @@ importers:
     devDependencies:
       '@amatlash/vite-plugin-stylelint':
         specifier: ^1.2.0
-        version: 1.2.0(rollup@4.39.0)(vite@6.2.5(sass@1.83.1)(terser@5.39.0))
+        version: 1.2.0(rollup@4.39.0)(vite@6.2.6(sass@1.83.1)(terser@5.39.0))
       '@vitejs/plugin-vue':
         specifier: ^5.2.3
-        version: 5.2.3(vite@6.2.5(sass@1.83.1)(terser@5.39.0))(vue@3.5.13)
+        version: 5.2.3(vite@6.2.6(sass@1.83.1)(terser@5.39.0))(vue@3.5.13)
       eslint:
         specifier: ^9.23.0
         version: 9.23.0
@@ -40,14 +40,14 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       vite:
-        specifier: ^6.2.5
-        version: 6.2.5(sass@1.83.1)(terser@5.39.0)
+        specifier: ^6.2.6
+        version: 6.2.6(sass@1.83.1)(terser@5.39.0)
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@9.23.0)(vite@6.2.5(sass@1.83.1)(terser@5.39.0))
+        version: 1.8.1(eslint@9.23.0)(vite@6.2.6(sass@1.83.1)(terser@5.39.0))
       vite-plugin-pwa:
         specifier: ^1.0.0
-        version: 1.0.0(vite@6.2.5(sass@1.83.1)(terser@5.39.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.0.0(vite@6.2.6(sass@1.83.1)(terser@5.39.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       workbox-precaching:
         specifier: ^7.3.0
         version: 7.3.0
@@ -1246,8 +1246,8 @@ packages:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001710:
-    resolution: {integrity: sha512-B5C0I0UmaGqHgo5FuqJ7hBd4L57A4dDD+Xi+XX1nXOoxGeDdY4Ko38qJYOyqznBVJEqON5p8P1x5zRR3+rsnxA==}
+  caniuse-lite@1.0.30001713:
+    resolution: {integrity: sha512-wCIWIg+A4Xr7NfhTuHdX+/FKh3+Op3LBbSp2N5Pfx6T/LhdQy3GTyoTg48BReaW/MyMNZAkTadsBtai3ldWK0Q==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -1382,8 +1382,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.132:
-    resolution: {integrity: sha512-QgX9EBvWGmvSRa74zqfnG7+Eno0Ak0vftBll0Pt2/z5b3bEGYL6OUXLgKPtvx73dn3dvwrlyVkjPKRRlhLYTEg==}
+  electron-to-chromium@1.5.136:
+    resolution: {integrity: sha512-kL4+wUTD7RSA5FHx5YwWtjDnEEkIIikFgWHR4P6fqjw1PPLlqYkxeOb++wAauAssat0YClCy8Y3C5SxgSkjibQ==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2631,8 +2631,8 @@ packages:
       '@vite-pwa/assets-generator':
         optional: true
 
-  vite@6.2.5:
-    resolution: {integrity: sha512-j023J/hCAa4pRIUH6J9HemwYfjB5llR2Ps0CWeikOtdR8+pAURAk0DoJC5/mm9kd+UgdnIy7d6HE4EAvlYhPhA==}
+  vite@6.2.6:
+    resolution: {integrity: sha512-9xpjNl3kR4rVDZgPNdTL0/c6ao4km69a/2ihNQbcANz8RuCOK3hQBmLSJf3bRKVQjVMda+YvizNE8AwvogcPbw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2805,12 +2805,12 @@ packages:
 
 snapshots:
 
-  '@amatlash/vite-plugin-stylelint@1.2.0(rollup@4.39.0)(vite@6.2.5(sass@1.83.1)(terser@5.39.0))':
+  '@amatlash/vite-plugin-stylelint@1.2.0(rollup@4.39.0)(vite@6.2.6(sass@1.83.1)(terser@5.39.0))':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       rollup: 4.39.0
       stylelint: 14.16.1
-      vite: 6.2.5(sass@1.83.1)(terser@5.39.0)
+      vite: 6.2.6(sass@1.83.1)(terser@5.39.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3846,9 +3846,9 @@ snapshots:
 
   '@types/trusted-types@2.0.7': {}
 
-  '@vitejs/plugin-vue@5.2.3(vite@6.2.5(sass@1.83.1)(terser@5.39.0))(vue@3.5.13)':
+  '@vitejs/plugin-vue@5.2.3(vite@6.2.6(sass@1.83.1)(terser@5.39.0))(vue@3.5.13)':
     dependencies:
-      vite: 6.2.5(sass@1.83.1)(terser@5.39.0)
+      vite: 6.2.6(sass@1.83.1)(terser@5.39.0)
       vue: 3.5.13
 
   '@vue/compiler-core@3.5.13':
@@ -4011,8 +4011,8 @@ snapshots:
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001710
-      electron-to-chromium: 1.5.132
+      caniuse-lite: 1.0.30001713
+      electron-to-chromium: 1.5.136
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
@@ -4045,7 +4045,7 @@ snapshots:
 
   camelcase@5.3.1: {}
 
-  caniuse-lite@1.0.30001710: {}
+  caniuse-lite@1.0.30001713: {}
 
   chalk@4.1.2:
     dependencies:
@@ -4179,7 +4179,7 @@ snapshots:
     dependencies:
       jake: 10.9.2
 
-  electron-to-chromium@1.5.132: {}
+  electron-to-chromium@1.5.136: {}
 
   emoji-regex@8.0.0: {}
 
@@ -5594,26 +5594,26 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-eslint@1.8.1(eslint@9.23.0)(vite@6.2.5(sass@1.83.1)(terser@5.39.0)):
+  vite-plugin-eslint@1.8.1(eslint@9.23.0)(vite@6.2.6(sass@1.83.1)(terser@5.39.0)):
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@types/eslint': 8.56.12
       eslint: 9.23.0
       rollup: 2.79.2
-      vite: 6.2.5(sass@1.83.1)(terser@5.39.0)
+      vite: 6.2.6(sass@1.83.1)(terser@5.39.0)
 
-  vite-plugin-pwa@1.0.0(vite@6.2.5(sass@1.83.1)(terser@5.39.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.0.0(vite@6.2.6(sass@1.83.1)(terser@5.39.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.0
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.12
-      vite: 6.2.5(sass@1.83.1)(terser@5.39.0)
+      vite: 6.2.6(sass@1.83.1)(terser@5.39.0)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.2.5(sass@1.83.1)(terser@5.39.0):
+  vite@6.2.6(sass@1.83.1)(terser@5.39.0):
     dependencies:
       esbuild: 0.25.2
       postcss: 8.5.3
