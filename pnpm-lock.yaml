@@ -16,7 +16,7 @@ importers:
         version: 3.5.13
       vue-router:
         specifier: '4'
-        version: 4.5.0(vue@3.5.13)
+        version: 4.5.1(vue@3.5.13)
     devDependencies:
       '@amatlash/vite-plugin-stylelint':
         specifier: ^1.2.0
@@ -1394,8 +1394,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.145:
-    resolution: {integrity: sha512-pZ5EcTWRq/055MvSBgoFEyKf2i4apwfoqJbK/ak2jnFq8oHjZ+vzc3AhRcz37Xn+ZJfL58R666FLJx0YOK9yTw==}
+  electron-to-chromium@1.5.146:
+    resolution: {integrity: sha512-KI0DFJBdqehWSqXmNKIAHpjW4rHL1ugBx4ljOXli41E+IV3JKyTxZ6E7/NgVifzDXBHUqR8Ae1I+eu9vAIqfyQ==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2683,8 +2683,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  vue-router@4.5.0:
-    resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
+  vue-router@4.5.1:
+    resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -4025,7 +4025,7 @@ snapshots:
   browserslist@4.24.4:
     dependencies:
       caniuse-lite: 1.0.30001716
-      electron-to-chromium: 1.5.145
+      electron-to-chromium: 1.5.146
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
@@ -4192,7 +4192,7 @@ snapshots:
     dependencies:
       jake: 10.9.2
 
-  electron-to-chromium@1.5.145: {}
+  electron-to-chromium@1.5.146: {}
 
   emoji-regex@8.0.0: {}
 
@@ -5643,7 +5643,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-router@4.5.0(vue@3.5.13):
+  vue-router@4.5.1(vue@3.5.13):
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13
