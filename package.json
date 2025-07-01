@@ -14,7 +14,7 @@
   "devDependencies": {
     "@amatlash/vite-plugin-stylelint": "^1.2.0",
     "@vitejs/plugin-vue": "^5.2.3",
-    "eslint": "^9.25.1",
+    "eslint": "^9.30.0",
     "eslint-plugin-vue": "^9.33.0",
     "postcss-html": "^1.8.0",
     "postcss-scss": "^4.0.9",
