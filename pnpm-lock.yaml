@@ -47,13 +47,13 @@ importers:
         version: 1.8.1(eslint@9.39.1)(vite@7.1.11(sass@1.83.1)(terser@5.44.1))
       vite-plugin-pwa:
         specifier: ^1.0.3
-        version: 1.0.3(vite@7.1.11(sass@1.83.1)(terser@5.44.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.0.3(vite@7.1.11(sass@1.83.1)(terser@5.44.1))(workbox-build@7.3.0)(workbox-window@7.4.0)
       workbox-precaching:
         specifier: ^7.4.0
         version: 7.4.0
       workbox-window:
-        specifier: ^7.3.0
-        version: 7.3.0
+        specifier: ^7.4.0
+        version: 7.4.0
 
 packages:
 
@@ -2836,6 +2836,9 @@ packages:
 
   workbox-window@7.3.0:
     resolution: {integrity: sha512-qW8PDy16OV1UBaUNGlTVcepzrlzyzNW/ZJvFQQs2j2TzGsg6IKjcpZC1RSquqQnTOafl5pCj5bGfAHlCjOOjdA==}
+
+  workbox-window@7.4.0:
+    resolution: {integrity: sha512-/bIYdBLAVsNR3v7gYGaV4pQW3M3kEPx5E8vDxGvxo6khTrGtSSCS7QiFKv9ogzBgZiy0OXLP9zO28U/1nF1mfw==}
 
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
@@ -5718,14 +5721,14 @@ snapshots:
       rollup: 2.79.2
       vite: 7.1.11(sass@1.83.1)(terser@5.44.1)
 
-  vite-plugin-pwa@1.0.3(vite@7.1.11(sass@1.83.1)(terser@5.44.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.0.3(vite@7.1.11(sass@1.83.1)(terser@5.44.1))(workbox-build@7.3.0)(workbox-window@7.4.0):
     dependencies:
       debug: 4.4.1
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.15
       vite: 7.1.11(sass@1.83.1)(terser@5.44.1)
       workbox-build: 7.3.0
-      workbox-window: 7.3.0
+      workbox-window: 7.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5955,6 +5958,11 @@ snapshots:
     dependencies:
       '@types/trusted-types': 2.0.7
       workbox-core: 7.3.0
+
+  workbox-window@7.4.0:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+      workbox-core: 7.4.0
 
   wrappy@1.0.2: {}
 
