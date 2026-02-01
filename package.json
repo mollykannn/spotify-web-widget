@@ -16,7 +16,7 @@
     "@vitejs/plugin-vue": "^6.0.3",
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "^9.33.0",
-    "postcss-html": "^1.8.0",
+    "postcss-html": "^1.8.1",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.7.4",
     "vite": "^7.3.0",
